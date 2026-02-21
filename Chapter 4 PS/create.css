@@ -1,0 +1,62 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Table Styling */
+table {
+    border-collapse: collapse;
+    width: 70%;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header Styling */
+thead {
+    background: #007bff;
+    color: #ffffff;
+    text-align: left;
+    font-size: 18px;
+}
+
+thead th {
+    padding: 12px;
+}
+
+/* Row Styling */
+tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Alternate Row Colors */
+tbody tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* Hover Effect */
+tbody tr:hover {
+    background: #d6e9ff;
+    cursor: pointer;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+    thead {
+        font-size: 16px;
+    }
+    tbody td {
+        font-size: 14px;
+    }
+}

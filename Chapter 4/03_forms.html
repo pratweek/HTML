@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> 
+/* Apply Netflix-style dark theme */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #141414;  /* Netflix dark */
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container for the form */
+form {
+  background: #1c1c1c;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  width: 400px;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  color: #e50914; /* Netflix red */
+  margin-bottom: 20px;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #ddd;
+}
+
+/* Inputs, Select, Textarea */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2c2c2c;
+  color: #fff;
+  font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #e50914;
+}
+
+/* Radio buttons & checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+  accent-color: #e50914;
+}
+
+/* Radio/checkbox labels inline */
+p {
+  margin-bottom: 8px;
+  color: #fff;
+  font-weight: 600;
+}
+label.inline {
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: normal;
+  color: #ccc;
+}
+
+/* Textarea */
+textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #f6121d;
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(229, 9, 20, 0.4);
+}
+
+
+
+    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Subscription Form</title>
+</head>
+
+
+
+<body>
+    <h1> Netflix Subscription Plan  </h1>
+    <form action="/submit.php">
+        <div> 
+            <label for ="name">Name</label>
+           <input type = "text"placeholder="Enter your name">
+        </div>
+        <br>  <!-- provide space between lines -->
+        <!-- Phone Input -->
+        <div>
+            <label for ="phone">Phone</label>
+            <input id="phone" type ="phone" placeholder = "Enter phone">
+        </div>
+        <br>
+                   <!--Email Input-->
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type ="email" placeholder="Enter email">
+        </div>
+        <br>
+        <!--Password Input-->
+        <div>
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter password" required>
+        </div>
+        <br>
+        <!--Date input -->
+        <div>
+            <label for="dob">Date of Birth</label>
+            <input="dob" type="date" required>
+        </div>
+        <br>
+        <!--Dropdown (select input) for gender -->
+        <div>
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+                <option value=""disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <div>
+                <!--Subscription Plan -->
+                <p>Subscription Plan</p>
+
+
+                <input id="basic" type ="radio" name="subscription" value="basic">
+                <label for=""basic">Basic</label>
+
+
+                <input id="premium" type="radio" name="subscription" value="premium">
+                <label for="premium">Premium</label>
+
+                <input id="deluxe" type="radio" name="subscription"
+                value="deluxe">
+                <label for="deluxe">Deluxe</label>
+
+                <br>
+
+                <input id="terms" type="checkbox" required>
+                <label for="terms"> I agree to terms and conditon</label>
+
+
+
+            </div>
+
+            <!-- Area for feedback -->
+
+        <div>
+            <label for="comments">Comments</label>
+            <textarea id ="comments" placeholder ="Enter your comments here" rows="4" cols="50"></textarea>
+        </div>
+
+        <!--Submit button -->
+        <div>
+            <button type ="Submit">Submit</button>
+        </div>
+    </form>
+    <!-- Forms ends here  -->
+</body>
+</html>
